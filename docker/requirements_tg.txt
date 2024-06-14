@@ -1,0 +1,4 @@
+python-telegram-bot==21.3
+opencv-python==4.9.0.80
+werkzeug==3.0.3
+ultralytics==8.2.9
