@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Определить тип повреждения</title>
+</head>
+<body>
+    <section class="header">
+        <div class="left-header">
+            <div class="nav-bar">
+                <div class="logo">
+                    Dart Welders
+                </div>
+                <div class="nav-items">
+                    <a href="#right-side" class="nav-item">Определить повреждение</a>
+                    <a href="#tech" class="nav-item">Технологии</a>
+                    <a href="#team" class="nav-item">Команда</a>
+                </div>
+            </div>
+            <div class="center-text">
+                <h1>
+                    Определите тип повреждения <span class="cor"> вашего сварочного шва </span> в один клик
+                </h1>
+                <p>
+                    Используйте искусственный интеллект для определения типа повреждения
+                </p>
+            </div>
+            <div class="footer-top">
+
+            </div>
+        </div>
+        <div class="right-side" id="right-side">
+            <div class="drop-container">
+                <div class="add-photo">
+                    <label class="input-file">
+                        <input type="file" name="file" class="input_file">                            
+                        <span>Выберите файл</span>
+                    </label>                    
+                    <div class="instructions">
+                        <p>Загрузите снимок</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="results-container">
+        
+    </section>
+
+    <section class="about-project" id="tech">
+        <h2 class="about">Технологии</h2>
+        <h2>В нашем проекте мы использовали:</h2>
+        <div class="params">
+            <div class="param">
+                <h3>Нейронная сеть на базе YOLO v8</h3>
+                <p>YOLOv8 - это передовая модель обнаружения объектов в реальном времени, которая обеспечивает высокую точность распознавания объектов на фото. YOLOv8 обладает высокой скоростью и точностью работы.</p>
+            </div>
+            <div class="param">
+                <h3>Датасет</h3>
+                <p>Для создания мы использовали датсет, который состоит из снимков. Мы аугментировали датасет и подобрали наилучшие параметры для обученияы</p>
+            </div>
+            <div class="param">
+                <h3>API</h3>
+                <p>Наш сервис разработан с использованием технологии API что позволяет Вам объеденить его с вашим бизнесом или интегрировать в другой сервис</p>
+            </div>
+            <div class="param">
+                <h3>Yandex Cloud</h3>
+                <p>Yandex Cloud - это бесплатный облачный сервис, который позволяет писать и выполнять код на Python прямо в браузере. Он предоставляет доступ к большому количеству вычислительных ресурсов, что делает его полезным для задач машинного обучения и анализа данных.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="team" id="team">
+        <h1>Команда</h1>
+        <div class="team-wrapper">
+            <div class="team-member">
+                <div class="top-img">
+                    <img src="media/IMG_8697.jpeg" alt="" srcset="">
+                </div>
+                <div class="name">
+                    <h3>Землянский Семён</h3>
+                    <p>Fullstack разработчик</p>
+                </div>
+                <div class="what-to-do">
+                    Разработка API, разработка сайта, тренеровка ML-модели
+                </div>
+            </div>
+            <div class="team-member">
+                <div class="top-img">
+                    <img src="media/georg.png" alt="" srcset="">
+                </div>
+                <div class="name">
+                    <h3>Царегородцев Георгий</h3>
+                    <p>Менеджер проекта</p>
+                </div>
+                <div class="what-to-do">
+                    Разработка Docker-контейнера, подготовка презентации
+                </div>
+            </div>
+            <div class="team-member">
+                <div class="top-img">
+                    <img src="media/vlad2.jpeg" alt="" srcset="">
+                </div>
+                <div class="name">
+                    <h3>Глазырин Владислав</h3>
+                    <p>ML-инженер</p>
+                </div>
+                <div class="what-to-do">
+                    Поиск подходящей предобученной нейронной сети, обучение
+                </div>
+            </div>
+            <div class="team-member">
+                <div class="top-img">
+                    <img src="media/andrew.jpeg" alt="" srcset="">
+                </div>
+                <div class="name">
+                    <h3>Маслов Андрей</h3>
+                    <p>DevOps Инженер</p>
+                </div>
+                <div class="what-to-do">
+                    Создание Docker-контейнера, деплой проекта
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="footer">
+        Сделано в рамках хакатона "Атомик Хак 2.0" 2024
+    </section>
+
+    <script src="/script.js"></script>
+</body>
+</html>
