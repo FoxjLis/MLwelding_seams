@@ -5,7 +5,7 @@ RUN apt-get update && apt-get install -y \
     libglib2.0-0
 
 WORKDIR /app
-COPY ../../../../PycharmProjects/haha_docker /app
+COPY . /app
 
 COPY requirements.txt /app/requirements.txt
 RUN pip install --no-cache-dir -r /app/requirements.txt
