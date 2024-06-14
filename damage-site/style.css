@@ -1,0 +1,486 @@
+@font-face {
+	font-family: 'OpenSans'; 
+	src: url(fonts/Open_Sans/OpenSans-VariableFont_wdth\,wght.ttf); 
+}
+
+@font-face {
+	font-family: 'OpenSans Bold'; 
+	src: url(fonts/Open_Sans/static/OpenSans-Bold.ttf); 
+}
+
+@font-face {
+	font-family: 'OpenSans Light'; 
+	src: url(fonts/Open_Sans/static/OpenSans-Light.ttf); 
+}
+
+@font-face {
+	font-family: 'OpenSans Extra Bold'; 
+	src: url(fonts/Open_Sans/static/OpenSans-ExtraBold.ttf); 
+}
+
+* {
+    font-family: 'OpenSans';
+    color: black;
+    text-decoration: none;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    width: 100%;
+    background-color: rgb(250, 250, 250);
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.left-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 45%;
+    min-width: 320px;
+    padding: 30px;
+    height: 100vh;
+}
+
+.nav-bar {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: self-start;
+    justify-content: space-between;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+.logo {
+    color: black;
+    font-family: 'OpenSans Extra Bold';
+    font-size: 50px;
+}
+
+.cor {
+    color: rgb(174, 116, 8);
+}
+
+.nav-items {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-item {
+    width: 100%;
+    color: rgb(174, 116, 8);
+    margin: 5px;
+    font-family: 'OpenSans Light';
+    text-align: end;
+}
+
+.nav-item:hover {
+    width: 100%;
+    color: rgb(211, 147, 98);
+    margin: 5px;
+    font-family: 'OpenSans Light';
+    text-align: end;
+}
+
+.center-text {
+    margin-top: -170px;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.center-text h1{
+    color: black;
+    font-family: 'OpenSans Light';
+    font-size: 40px;
+    text-align: center;
+}
+
+.center-text p{
+    color: black;
+    font-family: 'OpenSans Light';
+    font-size: 20px;
+    text-align: center;
+}
+
+.right-side {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 45%;
+    min-width: 320px;
+    height: 100vh;
+    padding: 30px;
+}
+
+.drop-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+    margin: 30px;
+    background: url('media/weld.jpeg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border: 1px solid rgb(166, 123, 90);
+}
+
+.add-photo {
+    width: 80%;
+    height: 250px;
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+    border: 1px solid rgb(166, 123, 90);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.input-file {
+	display: inline-block;
+}
+
+.input-file span {
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+	cursor: pointer;
+	outline: none;
+	text-decoration: none;
+	font-size: 14px;
+	vertical-align: middle;
+	color: rgb(255 255 255);
+	text-align: center;
+	border-radius: 4px;
+	background-color: rgb(215, 95, 3);
+	line-height: 22px;
+	height: 100px;
+    width: 250px;
+	padding: 10px 20px;
+	box-sizing: border-box;
+	border: none;
+	margin: 0;
+	transition: background-color 0.2s;
+    border-radius: 40px;
+    font-family: 'OpenSans Bold';
+    font-size: 24px;
+}
+
+.input-file input[type=file] {
+	z-index: -1;
+	opacity: 0;
+	display: block;
+	width: 0;
+	height: 0;
+}
+ 
+.input-file input[type=file]:focus + span {
+	box-shadow: 0 0 0 0.2rem rgba(176, 128, 7, 0.622);
+}
+ 
+.input-file:hover span {
+	background-color: rgb(236, 177, 29);
+}
+.input-file:active span {
+	background-color: rgb(21, 219, 58);
+}
+ 
+.input-file input[type=file]:disabled + span {
+	background-color: #eee;
+}
+
+.instructions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    width: 80%;
+    color: white;
+}
+
+.instructions p{
+   margin: 1px;
+   font-size: 15px;
+   color: white;
+   font-family: 'OpenSans Light';
+   text-align: center;
+}
+
+.results-container {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: space-around;
+    width: 95%;
+    height: 100%;
+    flex-wrap: wrap;
+}
+
+.results {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: space-between;
+    width: 60%;
+    min-width: 380px;
+    border-radius: 40px;
+    background-color: white;
+    border: 1px solid rgb(166, 123, 90);
+    height: 300px;
+    padding: 25px;
+}
+
+.result {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.result img {
+    height: 100%;
+    border-radius: 15px;
+}
+
+.description {
+    width: 50%;
+    overflow: hidden;
+    height: 100%;
+    padding: 20px;
+}
+
+.description p{
+    color: black;
+    margin: 2px;
+    font-family: 'OpenSans Extra Bold';
+    color: rgb(154, 154, 154);
+}
+
+.description p span{
+    color: black;
+    margin: 5px;
+    font-family: 'OpenSans light';
+    color: rgb(0, 0, 0);
+}
+
+.claster-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'OpenSans Extra Bold';
+    font-size: 70px;
+    color: rgb(174, 116, 8);
+    margin: 20px;
+}
+
+.about-project {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    position: relative; 
+}
+
+.about-project:after { 
+    margin: 3rem; 
+    content: "AI MEDICINE"; 
+    position: absolute; 
+    font-size: 300px;
+    color: rgb(240, 240, 240); 
+    font-family: 'OpenSans Extra Bold';
+    top: auto; 
+    left: auto; 
+    z-index: -1; 
+    width: 100%;
+    overflow: hidden;
+} 
+
+.about {
+    font-family: 'OpenSans Extra Bold';
+    font-size: 60px;
+    color: rgb(174, 116, 8);
+}
+
+.params {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.param {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 500px;
+    padding: 15px;
+    margin: 20px;
+    border-radius: 40px;
+}
+
+.param h3 {
+    width: 80%;
+    text-align: start;
+    color: rgb(174, 116, 8);
+}
+
+.param p {
+    font-family: 'OpenSans Light';
+    font-size: 18px;
+}
+
+.team {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.team h1{
+    font-family: 'OpenSans Extra Bold';
+    font-size: 60px;
+    color: rgb(174, 116, 8);
+}
+
+.team-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.team-member {
+    width: 360px;
+    height: 600px;
+    margin: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+    border-radius: 25px;
+    border: 1px solid rgb(174, 116, 8);
+    background-color: white;
+}
+.top-img {
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+}
+
+.top-img img{
+    width: 100%;
+}
+.name {
+    font-family: 'OpenSans Bold';
+    font-size: 25px;
+}
+.name h3{
+    font-family: 'OpenSans Extra Bold';
+    font-size: 25px;
+    margin: 0;
+    text-align: center;
+}
+.name p{
+    font-family: 'OpenSans Bold';
+    font-size: 15px;
+    margin: 0;
+    text-align: center;
+}
+.what-to-do {
+    padding: 30px;
+    font-family: 'OpenSans Light';
+}
+
+.footer {
+    width: 100%;
+    background-color: rgba(36, 36, 36, 0.168);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'OpenSans Light';
+    font-size: 20px;
+    height: 70px;
+    color: rgb(174, 116, 8);
+    margin-top: 40px;
+    padding: 10px;
+    text-align: center;
+
+}
+
+@media screen and (max-width: 1199px) {
+    .left-header {
+        width: 80%;
+        height: 100%;
+    }
+
+    .center-text {
+        margin-top: 0;
+    }
+
+    .right-side {
+        width: 80%;
+        height: 500px;
+    }
+
+    .results {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: auto;
+    }
+
+    .description {
+        width: 90%;
+        height: auto;
+    }
+
+    .result {
+        width: 90%;
+    }
+
+    .result img{
+        width: 100%;
+    }
+
+
+}
