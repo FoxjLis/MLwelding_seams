@@ -40,7 +40,7 @@ def whats_damage():
     result_file_path = os.path.join('results', unical_name)
     cv2.imwrite(result_file_path, image)
     result_file_path = unical_name
-    return jsonify({'result_file_path': (result_file_path, results[0].tojson())})
+    return jsonify({'result_file_path': (result_file_path, results[0][0].tojson())})
 
 @app.route('/get_image/<image_name>', methods=['GET'])
 def get_image(image_name):

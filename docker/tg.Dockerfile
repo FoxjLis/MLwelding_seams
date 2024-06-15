@@ -13,4 +13,4 @@ COPY requirements_tg.txt /app/requirements.txt
 RUN pip install --default-timeout=1200 -r /app/requirements.txt
 
 
-ENTRYPOINT ["python3", "telegram-bot/bot.py"]
+ENTRYPOINT ["python3", "bot.py"]

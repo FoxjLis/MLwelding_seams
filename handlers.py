@@ -6,7 +6,7 @@ from utils import download_photo, process_image
 from config import CONFIDENCE_THRESHOLD
 
 # Инициализация модели
-model = YOLO('../best_x.pt')
+model = YOLO('best.pt')
 
 defect_descriptions = {
     'adj': 'Брызги, прожоги от дуги',
