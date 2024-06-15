@@ -1,10 +1,10 @@
-version: '3'
+version: '3.8'
 
 services:
   website:
     build:
       context: .
-      dockerfile: flask.Dockerfile
+      dockerfile: docker/flask.Dockerfile
     ports:
       - "8000:8000"
     restart: always
@@ -12,7 +12,7 @@ services:
   telegram-bot:
     build:
       context: .
-      dockerfile: tg.Dockerfile
+      dockerfile: docker/tg.Dockerfile
     restart: always
     environment:
       - BOT_TOKEN= '7064403736:AAFNUPLB4VGSNctsDm8QBijLX7C50F0SjYg'

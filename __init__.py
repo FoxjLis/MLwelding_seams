@@ -7,7 +7,7 @@ import uuid
 
 app = Flask(__name__)
 CORS(app)
-model = YOLO('best_x.pt')
+model = YOLO('best.pt')
 
 @app.route('/whatsdamage', methods=['POST'])
 def whats_damage():
