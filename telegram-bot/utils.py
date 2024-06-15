@@ -33,3 +33,4 @@ def process_image(results, image, model, defect_descriptions, confidence_thresho
             cv2.putText(image, f'{label} {confidence:.2f}', (x1, y1 - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.9, (36, 255, 12), 2)
 
     return response, image
+

@@ -4,15 +4,15 @@ services:
   website:
     build:
       context: .
-      dockerfile: MLwelding_seams/docker/flask.Dockerfile
+      dockerfile: flask.Dockerfile
     ports:
-      - "5000:5000"
+      - "8000:8000"
     restart: always
 
   telegram-bot:
     build:
       context: .
-      dockerfile: MLwelding_seams/docker/tg.Dockerfile
+      dockerfile: tg.Dockerfile
     restart: always
     environment:
       - BOT_TOKEN= '7064403736:AAFNUPLB4VGSNctsDm8QBijLX7C50F0SjYg'

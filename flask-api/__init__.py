@@ -1,13 +1,13 @@
-from flask import Flask, request, jsonify, send_from_directory
+from flask import Flask, request, jsonify, send_from_directorywr
 from ultralytics import YOLO 
-import cv2 
+import cv2
 from flask_cors import CORS 
 import os 
 import uuid 
 
 app = Flask(__name__)
 CORS(app)
-model = YOLO('best_m.pt')
+model = YOLO('best.pt')
 
 @app.route('/whatsdamage', methods=['POST'])
 def whats_damage():
@@ -41,4 +41,4 @@ def get_image(image_name):
 
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000)
+    app.run(host='0.0.0.0', port=8000)

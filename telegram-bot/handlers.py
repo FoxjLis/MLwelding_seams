@@ -6,7 +6,7 @@ from utils import download_photo, process_image
 from config import CONFIDENCE_THRESHOLD
 
 # Инициализация модели
-model = YOLO('---')
+model = YOLO('best.pt')
 
 # Словарь с описанием дефектов
 defect_descriptions = {
