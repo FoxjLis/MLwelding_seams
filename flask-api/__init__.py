@@ -1,13 +1,13 @@
-from flask import Flask, request, jsonify, send_from_directorywr
-from ultralytics import YOLO 
+from flask import Flask, request, jsonify, send_from_directory
+from ultralytics import YOLO
 import cv2
-from flask_cors import CORS 
-import os 
-import uuid 
+from flask_cors import CORS
+import os
+import uuid
 
 app = Flask(__name__)
 CORS(app)
-model = YOLO('best.pt')
+model = YOLO('best_x.pt')
 
 @app.route('/whatsdamage', methods=['POST'])
 def whats_damage():
@@ -21,16 +21,24 @@ def whats_damage():
     file_path = os.path.join('uploads', file.filename)
     file.save(file_path)
 
-    results = model(file_path) 
+    image = cv2.imread(file_path)
+    results = model(file_path)
 
     img = cv2.imread(file_path)
     for result in results:
-        x1, y1, x2, y2, class_name = result
-        cv2.rectangle(img, (x1, y1), (x2, y2), (255, 0, 0), 2)
-        cv2.putText(img, class_name, (x1, y1 - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.9, (36,255,12), 2)
+        for box in result.boxes:
+            class_id = int(box.cls)
+            confidence = float(box.conf)  # Преобразование Tensor к float
+            label = model.names[class_id]
+
+            # Рисование ректов на изображении
+            x1, y1, x2, y2 = map(int, box.xyxy[0])
+            cv2.rectangle(image, (x1, y1), (x2, y2), (0, 255, 0), 2)
+            cv2.putText(image, f'{label} {confidence:.2f}', (x1, y1 - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.9, (36, 255, 12),
+                        2)
 
     result_file_path = os.path.join('results', f'{str(uuid.uuid4())}.jpg')
-    cv2.imwrite(result_file_path, img)
+    cv2.imwrite(result_file_path, image)
 
     return jsonify({'result_file_path': result_file_path})
 
