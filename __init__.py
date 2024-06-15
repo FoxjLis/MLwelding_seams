@@ -36,11 +36,11 @@ def whats_damage():
             cv2.rectangle(image, (x1, y1), (x2, y2), (0, 255, 0), 2)
             cv2.putText(image, f'{label} {confidence:.2f}', (x1, y1 - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.9, (36, 255, 12),
                         2)
-
-    result_file_path = os.path.join('results', f'{str(uuid.uuid4())}.jpg')
+    unical_name = f'{str(uuid.uuid4())}.jpg' 
+    result_file_path = os.path.join('results', unical_name)
     cv2.imwrite(result_file_path, image)
-
-    return jsonify({'result_file_path': result_file_path})
+    result_file_path = unical_name
+    return jsonify({'result_file_path': (result_file_path, results[0].tojson())})
 
 @app.route('/get_image/<image_name>', methods=['GET'])
 def get_image(image_name):
@@ -50,3 +50,4 @@ def get_image(image_name):
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=8000)
+
